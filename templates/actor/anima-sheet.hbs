@@ -1,71 +1,15 @@
 <form class="odam-sheet-body">
 
-  <header>
+  <header class="sheet-header">
     <h1>{{actor.name}}</h1>
   </header>
 
-  <section class="attributes">
-    <h2>Attributes</h2>
+  {{> "systems/odam/templates/actor/parts/details.hbs"}}
 
-    <label>
-      Strength
-      <input type="number" name="system.attributes.strength.value" value="{{system.attributes.strength.value}}" min="1" />
-    </label>
+  {{> "systems/odam/templates/actor/parts/attributes.hbs"}}
 
-    <label>
-      Agility
-      <input type="number" name="system.attributes.agility.value" value="{{system.attributes.agility.value}}" min="1" />
-    </label>
+  {{> "systems/odam/templates/actor/parts/derived.hbs"}}
 
-    <label>
-      Endurance
-      <input type="number" name="system.attributes.endurance.value" value="{{system.attributes.endurance.value}}" min="1" />
-    </label>
-
-    <label>
-      Perception
-      <input type="number" name="system.attributes.perception.value" value="{{system.attributes.perception.value}}" min="1" />
-    </label>
-
-    <label>
-      Intelligence
-      <input type="number" name="system.attributes.intelligence.value" value="{{system.attributes.intelligence.value}}" min="1" />
-    </label>
-
-    <label>
-      Charisma
-      <input type="number" name="system.attributes.charisma.value" value="{{system.attributes.charisma.value}}" min="1" />
-    </label>
-  </section>
-
-  <section class="derived">
-    <h2>Derived</h2>
-
-    <div>Health: {{system.derived.health}}</div>
-    <div>Stamina: {{system.derived.stamina}}</div>
-    <div>Reaction: {{system.derived.reaction}}</div>
-    <div>Shaping: {{system.derived.shaping}}</div>
-  </section>
-
-  <section class="pools">
-    <h2>Pools</h2>
-
-    <label>
-      Conviction
-      <input type="number" name="system.pools.conviction.value" value="{{system.pools.conviction.value}}" min="0" />
-      /
-      <input type="number" name="system.pools.conviction.max" value="{{system.pools.conviction.max}}" min="0" />
-    </label>
-
-    <label>
-      Nightmare
-      <input type="number" name="system.pools.nightmare" value="{{system.pools.nightmare}}" min="0" />
-    </label>
-
-    <label>
-      Doubt
-      <input type="number" name="system.pools.doubt" value="{{system.pools.doubt}}" min="0" />
-    </label>
-  </section>
+  {{> "systems/odam/templates/actor/parts/pools.hbs"}}
 
 </form>
