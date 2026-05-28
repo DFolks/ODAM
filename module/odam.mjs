@@ -28,4 +28,11 @@ Hooks.once("init", async function () {
     makeDefault: true,
     label: "ODAM Item Sheet",
   });
+
+  await foundry.applications.handlebars.loadTemplates([
+    "systems/odam/templates/actor/parts/details.hbs",
+    "systems/odam/templates/actor/parts/attributes.hbs",
+    "systems/odam/templates/actor/parts/derived.hbs",
+    "systems/odam/templates/actor/parts/pools.hbs",
+  ]);
 });
