@@ -1,80 +1,71 @@
-<section class="odam-sheet-body">
+<form class="odam-sheet-body">
 
   <header>
     <h1>{{document.name}}</h1>
   </header>
 
   <section class="attributes">
-
     <h2>Attributes</h2>
 
-    <div>
-      Strength: {{system.attributes.strength.value}}
-    </div>
+    <label>
+      Strength
+      <input type="number" name="system.attributes.strength.value" value="{{system.attributes.strength.value}}" min="1" />
+    </label>
 
-    <div>
-      Agility: {{system.attributes.agility.value}}
-    </div>
+    <label>
+      Agility
+      <input type="number" name="system.attributes.agility.value" value="{{system.attributes.agility.value}}" min="1" />
+    </label>
 
-    <div>
-      Endurance: {{system.attributes.endurance.value}}
-    </div>
+    <label>
+      Endurance
+      <input type="number" name="system.attributes.endurance.value" value="{{system.attributes.endurance.value}}" min="1" />
+    </label>
 
-    <div>
-      Perception: {{system.attributes.perception.value}}
-    </div>
+    <label>
+      Perception
+      <input type="number" name="system.attributes.perception.value" value="{{system.attributes.perception.value}}" min="1" />
+    </label>
 
-    <div>
-      Intelligence: {{system.attributes.intelligence.value}}
-    </div>
+    <label>
+      Intelligence
+      <input type="number" name="system.attributes.intelligence.value" value="{{system.attributes.intelligence.value}}" min="1" />
+    </label>
 
-    <div>
-      Charisma: {{system.attributes.charisma.value}}
-    </div>
-
+    <label>
+      Charisma
+      <input type="number" name="system.attributes.charisma.value" value="{{system.attributes.charisma.value}}" min="1" />
+    </label>
   </section>
 
   <section class="derived">
-
     <h2>Derived</h2>
 
-    <div>
-      Health: {{system.derived.health}}
-    </div>
-
-    <div>
-      Stamina: {{system.derived.stamina}}
-    </div>
-
-    <div>
-      Reaction: {{system.derived.reaction}}
-    </div>
-
-    <div>
-      Shaping: {{system.derived.shaping}}
-    </div>
-
+    <div>Health: {{system.derived.health}}</div>
+    <div>Stamina: {{system.derived.stamina}}</div>
+    <div>Reaction: {{system.derived.reaction}}</div>
+    <div>Shaping: {{system.derived.shaping}}</div>
   </section>
 
   <section class="pools">
-
     <h2>Pools</h2>
 
-    <div>
-      Conviction:
-      {{system.pools.conviction.value}}
+    <label>
+      Conviction
+      <input type="number" name="system.pools.conviction.value" value="{{system.pools.conviction.value}}" min="0" />
       /
-      {{system.pools.conviction.max}}
-    </div>
+      <input type="number" name="system.pools.conviction.max" value="{{system.pools.conviction.max}}" min="0" />
+    </label>
 
-    <div>
-      Nightmare: {{system.pools.nightmare}}
-    </div>
+    <label>
+      Nightmare
+      <input type="number" name="system.pools.nightmare" value="{{system.pools.nightmare}}" min="0" />
+    </label>
 
-    <div>
-      Doubt: {{system.pools.doubt}}
-    </div>
-
+    <label>
+      Doubt
+      <input type="number" name="system.pools.doubt" value="{{system.pools.doubt}}" min="0" />
+    </label>
   </section>
 
-</section>
+</form>
