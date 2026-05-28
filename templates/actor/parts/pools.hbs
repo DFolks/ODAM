@@ -1,45 +1,52 @@
-<section class="pools">
-  <h2>Pools</h2>
+<section class="sheet-section pools">
+  <h2>Anima Pools</h2>
 
-  <label>
-    Conviction
+  <div class="sheet-section-content odam-grid three">
+    <div class="stat-box">
+      <label>
+        Conviction
+        <div class="pool-row">
+          <input
+            type="number"
+            name="system.pools.conviction.value"
+            value="{{system.pools.conviction.value}}"
+            min="0"
+          />
 
-    <input
-      type="number"
-      name="system.pools.conviction.value"
-      value="{{system.pools.conviction.value}}"
-      min="0"
-    />
+          <span>/</span>
 
-    /
+          <input
+            type="number"
+            name="system.pools.conviction.max"
+            value="{{system.pools.conviction.max}}"
+            min="0"
+          />
+        </div>
+      </label>
+    </div>
 
-    <input
-      type="number"
-      name="system.pools.conviction.max"
-      value="{{system.pools.conviction.max}}"
-      min="0"
-    />
-  </label>
+    <div class="stat-box">
+      <label>
+        Nightmare
+        <input
+          type="number"
+          name="system.pools.nightmare"
+          value="{{system.pools.nightmare}}"
+          min="0"
+        />
+      </label>
+    </div>
 
-  <label>
-    Nightmare
-
-    <input
-      type="number"
-      name="system.pools.nightmare"
-      value="{{system.pools.nightmare}}"
-      min="0"
-    />
-  </label>
-
-  <label>
-    Doubt
-
-    <input
-      type="number"
-      name="system.pools.doubt"
-      value="{{system.pools.doubt}}"
-      min="0"
-    />
-  </label>
+    <div class="stat-box">
+      <label>
+        Doubt
+        <input
+          type="number"
+          name="system.pools.doubt"
+          value="{{system.pools.doubt}}"
+          min="0"
+        />
+      </label>
+    </div>
+  </div>
 </section>
