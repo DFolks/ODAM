@@ -1,0 +1,28 @@
+.odam.sheet.actor {
+  min-height: 100%;
+}
+
+.odam-sheet-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 1rem;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  height: 100%;
+}
+
+.odam-sheet-body section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.odam-sheet-body label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
