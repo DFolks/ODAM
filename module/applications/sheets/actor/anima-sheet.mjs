@@ -11,11 +11,6 @@ export class ODAMAnimaSheet extends foundry.applications.api.HandlebarsApplicati
       title: "ODAM.AnimaSheet.Title",
       resizable: true,
     },
-    form: {
-      handler: ODAMAnimaSheet.#onSubmitForm,
-      submitOnChange: true,
-      closeOnSubmit: false,
-    },
   };
 
   static PARTS = {
@@ -24,7 +19,26 @@ export class ODAMAnimaSheet extends foundry.applications.api.HandlebarsApplicati
     },
   };
 
-  static async #onSubmitForm(event, form, formData) {
-    await this.document.update(formData.object);
+  async _prepareContext(options) {
+    const context = await super._prepareContext(options);
+
+    context.actor = this.document;
+    context.system = this.document.system;
+
+    return context;
+  }
+
+  async _onRender(context, options) {
+    await super._onRender(context, options);
+
+    const form = this.element.querySelector("form");
+    if (!form) return;
+
+    form.addEventListener("change", async (event) => {
+      event.preventDefault();
+
+      const formData = new foundry.applications.ux.FormDataExtended(form);
+      await this.document.update(formData.object);
+    });
   }
 }
