@@ -28,6 +28,73 @@ export class ODAMAnimaData extends foundry.abstract.TypeDataModel {
           value: new fields.NumberField({ integer: true, min: 1, initial: 1 }),
         }),
       }),
+      skills: new fields.SchemaField({
+        base: new fields.SchemaField({
+          academics: new fields.SchemaField({
+            value: new fields.NumberField({
+              integer: true,
+              min: 0,
+              initial: 0,
+            }),
+          }),
+          athletics: new fields.SchemaField({
+            value: new fields.NumberField({
+              integer: true,
+              min: 0,
+              initial: 0,
+            }),
+          }),
+          computers: new fields.SchemaField({
+            value: new fields.NumberField({
+              integer: true,
+              min: 0,
+              initial: 0,
+            }),
+          }),
+          creative: new fields.SchemaField({
+            value: new fields.NumberField({
+              integer: true,
+              min: 0,
+              initial: 0,
+            }),
+          }),
+          fighting: new fields.SchemaField({
+            value: new fields.NumberField({
+              integer: true,
+              min: 0,
+              initial: 0,
+            }),
+          }),
+          firearms: new fields.SchemaField({
+            value: new fields.NumberField({
+              integer: true,
+              min: 0,
+              initial: 0,
+            }),
+          }),
+          manual: new fields.SchemaField({
+            value: new fields.NumberField({
+              integer: true,
+              min: 0,
+              initial: 0,
+            }),
+          }),
+          social: new fields.SchemaField({
+            value: new fields.NumberField({
+              integer: true,
+              min: 0,
+              initial: 0,
+            }),
+          }),
+          weaponry: new fields.SchemaField({
+            value: new fields.NumberField({
+              integer: true,
+              min: 0,
+              initial: 0,
+            }),
+          }),
+        }),
+      }),
       derived: new fields.SchemaField({
         health: new fields.NumberField({ integer: true, initial: 100 }),
         stamina: new fields.NumberField({ integer: true, initial: 55 }),

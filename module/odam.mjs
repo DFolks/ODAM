@@ -34,5 +34,6 @@ Hooks.once("init", async function () {
     "systems/odam/templates/actor/parts/attributes.hbs",
     "systems/odam/templates/actor/parts/derived.hbs",
     "systems/odam/templates/actor/parts/pools.hbs",
+    "systems/odam/templates/actor/parts/skills.hbs",
   ]);
 });
