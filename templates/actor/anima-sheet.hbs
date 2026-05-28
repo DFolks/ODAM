@@ -1,35 +1,74 @@
 <form class="odam-sheet-body">
-  <header class="sheet-header">
-    <h1>{{actor.name}}</h1>
+  <header class="sheet-top">
+    <div class="odam-logo">ODAM</div>
+
+    <div class="identity-grid">
+      <label>Name <input type="text" name="name" value="{{actor.name}}" /></label>
+      <label>Gender/Age <input type="text" name="system.details.genderAge" value="{{system.details.genderAge}}" /></label>
+      <label>Hair/Eyes <input type="text" name="system.details.hairEyes" value="{{system.details.hairEyes}}" /></label>
+      <label>Height/Weight <input type="text" name="system.details.heightWeight" value="{{system.details.heightWeight}}" /></label>
+    </div>
   </header>
 
-  {{> "systems/odam/templates/actor/parts/details.hbs"}}
+  <nav class="sheet-tabs">
+    <a data-tab="core" class="active">Core</a>
+    <a data-tab="animus">Animus</a>
+  </nav>
 
-  {{> "systems/odam/templates/actor/parts/attributes.hbs"}}
+  <section class="tab-content active" data-tab-content="core">
+    {{> "systems/odam/templates/actor/parts/attributes.hbs"}}
 
-  <section class="sheet-main-grid">
-    <section class="sheet-main-left">
-      {{> "systems/odam/templates/actor/parts/skills.hbs"}}
+    <section class="sheet-main-grid">
+      <section class="sheet-main-left">
+        {{> "systems/odam/templates/actor/parts/skills.hbs"}}
+      </section>
+
+      <section class="sheet-main-right">
+        {{> "systems/odam/templates/actor/parts/derived.hbs"}}
+        {{> "systems/odam/templates/actor/parts/pools.hbs"}}
+
+        <section class="sheet-section placeholder-section">
+          <h2>Traits</h2>
+          <div class="sheet-section-content"><p>Traits will go here.</p></div>
+        </section>
+
+        <section class="sheet-section placeholder-section">
+          <h2>Magic</h2>
+          <div class="sheet-section-content"><p>Controls, Traditions, Remnants, and Practices will go here.</p></div>
+        </section>
+
+        <section class="sheet-section placeholder-section">
+          <h2>Material</h2>
+          <div class="sheet-section-content"><p>Possessions and Artifacts will go here.</p></div>
+        </section>
+
+        <section class="sheet-section placeholder-section">
+          <h2>Weapons</h2>
+          <div class="sheet-section-content"><p>Weapons will go here.</p></div>
+        </section>
+      </section>
+    </section>
+  </section>
+
+  <section class="tab-content" data-tab-content="animus">
+    <section class="sheet-section placeholder-section">
+      <h2>Animus</h2>
+      <div class="sheet-section-content"><p>Passive Aspect and Animus Abilities will go here.</p></div>
     </section>
 
-    <section class="sheet-main-right">
-      {{> "systems/odam/templates/actor/parts/derived.hbs"}}
+    <section class="sheet-section placeholder-section">
+      <h2>Passive Aspect Details</h2>
+      <div class="sheet-section-content"><p>Aspect details will go here.</p></div>
+    </section>
 
-      {{> "systems/odam/templates/actor/parts/pools.hbs"}}
+    <section class="sheet-section placeholder-section">
+      <h2>Animus Weapons</h2>
+      <div class="sheet-section-content"><p>Animus weapons will go here.</p></div>
+    </section>
 
-      <section class="sheet-section placeholder-section">
-        <h2>Magical</h2>
-        <div class="sheet-section-content">
-          <p>Controls, Traditions, Remnants, and Practices will go here.</p>
-        </div>
-      </section>
-
-      <section class="sheet-section placeholder-section">
-        <h2>Material</h2>
-        <div class="sheet-section-content">
-          <p>Possessions and Artifacts will go here.</p>
-        </div>
-      </section>
+    <section class="sheet-section placeholder-section nemesis-section">
+      <h2>Nemesis</h2>
+      <div class="sheet-section-content"><p>Nemesis details will go here.</p></div>
     </section>
   </section>
 </form>

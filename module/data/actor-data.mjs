@@ -7,6 +7,9 @@ export class ODAMAnimaData extends foundry.abstract.TypeDataModel {
         calling: new fields.StringField({ initial: "" }),
         faction: new fields.StringField({ initial: "" }),
         rankTitle: new fields.StringField({ initial: "" }),
+        genderAge: new fields.StringField({ initial: "" }),
+        hairEyes: new fields.StringField({ initial: "" }),
+        heightWeight: new fields.StringField({ initial: "" }),
       }),
       attributes: new fields.SchemaField({
         strength: new fields.SchemaField({

@@ -40,5 +40,24 @@ export class ODAMAnimaSheet extends foundry.applications.api.HandlebarsApplicati
       const formData = new foundry.applications.ux.FormDataExtended(form);
       await this.document.update(formData.object);
     });
+
+    this.element.querySelectorAll(".sheet-tabs a").forEach((tab) => {
+      tab.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        const selected = tab.dataset.tab;
+
+        this.element.querySelectorAll(".sheet-tabs a").forEach((t) => {
+          t.classList.toggle("active", t.dataset.tab === selected);
+        });
+
+        this.element.querySelectorAll(".tab-content").forEach((content) => {
+          content.classList.toggle(
+            "active",
+            content.dataset.tabContent === selected,
+          );
+        });
+      });
+    });
   }
 }

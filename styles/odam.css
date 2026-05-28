@@ -145,3 +145,65 @@
 .sheet-main-right .pool-row input {
   width: 4.5rem;
 }
+
+.sheet-top {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  align-items: end;
+  background: #f4eedf;
+  padding: 0.75rem;
+}
+
+.odam-logo {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.identity-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 1rem;
+}
+
+.identity-grid label {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem;
+  align-items: center;
+  font-variant: small-caps;
+}
+
+.sheet-tabs {
+  display: flex;
+  gap: 0.25rem;
+  background: #1f1b16;
+  padding: 0.25rem;
+}
+
+.sheet-tabs a {
+  padding: 0.35rem 1rem;
+  color: #f4eedf;
+  border: 1px solid #f4eedf;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.sheet-tabs a.active {
+  background: #f4eedf;
+  color: #1f1b16;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.nemesis-section h2 {
+  background: #000;
+}
