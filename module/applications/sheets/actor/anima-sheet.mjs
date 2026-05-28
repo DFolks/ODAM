@@ -5,7 +5,7 @@ export class ODAMAnimaSheet extends foundry.applications.api.HandlebarsApplicati
     classes: ["odam", "sheet", "actor", "anima"],
     position: {
       width: 720,
-      height: 800,
+      height: 700,
     },
     window: {
       title: "ODAM.AnimaSheet.Title",
