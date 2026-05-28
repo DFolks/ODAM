@@ -1,0 +1,10 @@
+{
+  "TYPES.Actor.anima": "Anima",
+  "TYPES.Actor.sleeper": "Sleeper",
+  "TYPES.Actor.reaver": "Reaver",
+  "TYPES.Actor.nemesis": "Nemesis",
+  "TYPES.Actor.npc": "NPC",
+
+  "ODAM.AnimaSheet.Title": "Anima Sheet",
+  "ODAM.ItemSheet.Title": "Item Sheet"
+}
