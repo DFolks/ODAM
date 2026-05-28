@@ -19,11 +19,44 @@ export class ODAMAnimaSheet extends foundry.applications.api.HandlebarsApplicati
     },
   };
 
+  _prepareSkillTotals(system) {
+    const attributes = system.attributes;
+    const skills = system.skills?.base ?? {};
+
+    const attributeKeys = [
+      "strength",
+      "agility",
+      "endurance",
+      "intelligence",
+      "perception",
+      "charisma",
+    ];
+
+    const totals = {};
+
+    for (const [skillKey, skillData] of Object.entries(skills)) {
+      const skillValue = skillData.value ?? 0;
+
+      totals[skillKey] = {
+        value: skillValue,
+        attributes: {},
+      };
+
+      for (const attributeKey of attributeKeys) {
+        const attributeValue = attributes[attributeKey]?.value ?? 0;
+        totals[skillKey].attributes[attributeKey] = skillValue + attributeValue;
+      }
+    }
+
+    return totals;
+  }
+
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
 
     context.actor = this.document;
     context.system = this.document.system;
+    context.skillTotals = this._prepareSkillTotals(context.system);
 
     return context;
   }

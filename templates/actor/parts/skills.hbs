@@ -1,115 +1,121 @@
 <section class="sheet-section skills">
   <h2>Learned / Skills</h2>
 
-  <div class="sheet-section-content odam-grid three">
+  <div class="sheet-section-content">
+    <table class="skills-table">
+      <thead>
+        <tr>
+          <th>Skill</th>
+          <th>Rating</th>
+          <th>STR</th>
+          <th>AGI</th>
+          <th>END</th>
+          <th>INT</th>
+          <th>PER</th>
+          <th>CHM</th>
+        </tr>
+      </thead>
 
-    <div class="stat-box">
-      <label>
-        Academics
-        <input
-          type="number"
-          name="system.skills.base.academics.value"
-          value="{{system.skills.base.academics.value}}"
-          min="0"
-        />
-      </label>
-    </div>
+      <tbody>
+        <tr>
+          <td>Academics</td>
+          <td><input type="number" name="system.skills.base.academics.value" value="{{system.skills.base.academics.value}}" min="0" /></td>
+          <td>{{skillTotals.academics.attributes.strength}}</td>
+          <td>{{skillTotals.academics.attributes.agility}}</td>
+          <td>{{skillTotals.academics.attributes.endurance}}</td>
+          <td>{{skillTotals.academics.attributes.intelligence}}</td>
+          <td>{{skillTotals.academics.attributes.perception}}</td>
+          <td>{{skillTotals.academics.attributes.charisma}}</td>
+        </tr>
 
-    <div class="stat-box">
-      <label>
-        Athletics
-        <input
-          type="number"
-          name="system.skills.base.athletics.value"
-          value="{{system.skills.base.athletics.value}}"
-          min="0"
-        />
-      </label>
-    </div>
+        <tr>
+          <td>Athletics</td>
+          <td><input type="number" name="system.skills.base.athletics.value" value="{{system.skills.base.athletics.value}}" min="0" /></td>
+          <td>{{skillTotals.athletics.attributes.strength}}</td>
+          <td>{{skillTotals.athletics.attributes.agility}}</td>
+          <td>{{skillTotals.athletics.attributes.endurance}}</td>
+          <td>{{skillTotals.athletics.attributes.intelligence}}</td>
+          <td>{{skillTotals.athletics.attributes.perception}}</td>
+          <td>{{skillTotals.athletics.attributes.charisma}}</td>
+        </tr>
 
-    <div class="stat-box">
-      <label>
-        Computers
-        <input
-          type="number"
-          name="system.skills.base.computers.value"
-          value="{{system.skills.base.computers.value}}"
-          min="0"
-        />
-      </label>
-    </div>
+        <tr>
+          <td>Computers</td>
+          <td><input type="number" name="system.skills.base.computers.value" value="{{system.skills.base.computers.value}}" min="0" /></td>
+          <td>{{skillTotals.computers.attributes.strength}}</td>
+          <td>{{skillTotals.computers.attributes.agility}}</td>
+          <td>{{skillTotals.computers.attributes.endurance}}</td>
+          <td>{{skillTotals.computers.attributes.intelligence}}</td>
+          <td>{{skillTotals.computers.attributes.perception}}</td>
+          <td>{{skillTotals.computers.attributes.charisma}}</td>
+        </tr>
 
-    <div class="stat-box">
-      <label>
-        Creative
-        <input
-          type="number"
-          name="system.skills.base.creative.value"
-          value="{{system.skills.base.creative.value}}"
-          min="0"
-        />
-      </label>
-    </div>
+        <tr>
+          <td>Creative</td>
+          <td><input type="number" name="system.skills.base.creative.value" value="{{system.skills.base.creative.value}}" min="0" /></td>
+          <td>{{skillTotals.creative.attributes.strength}}</td>
+          <td>{{skillTotals.creative.attributes.agility}}</td>
+          <td>{{skillTotals.creative.attributes.endurance}}</td>
+          <td>{{skillTotals.creative.attributes.intelligence}}</td>
+          <td>{{skillTotals.creative.attributes.perception}}</td>
+          <td>{{skillTotals.creative.attributes.charisma}}</td>
+        </tr>
 
-    <div class="stat-box">
-      <label>
-        Fighting
-        <input
-          type="number"
-          name="system.skills.base.fighting.value"
-          value="{{system.skills.base.fighting.value}}"
-          min="0"
-        />
-      </label>
-    </div>
+        <tr>
+          <td>Fighting</td>
+          <td><input type="number" name="system.skills.base.fighting.value" value="{{system.skills.base.fighting.value}}" min="0" /></td>
+          <td>{{skillTotals.fighting.attributes.strength}}</td>
+          <td>{{skillTotals.fighting.attributes.agility}}</td>
+          <td>{{skillTotals.fighting.attributes.endurance}}</td>
+          <td>{{skillTotals.fighting.attributes.intelligence}}</td>
+          <td>{{skillTotals.fighting.attributes.perception}}</td>
+          <td>{{skillTotals.fighting.attributes.charisma}}</td>
+        </tr>
 
-    <div class="stat-box">
-      <label>
-        Firearms
-        <input
-          type="number"
-          name="system.skills.base.firearms.value"
-          value="{{system.skills.base.firearms.value}}"
-          min="0"
-        />
-      </label>
-    </div>
+        <tr>
+          <td>Firearms</td>
+          <td><input type="number" name="system.skills.base.firearms.value" value="{{system.skills.base.firearms.value}}" min="0" /></td>
+          <td>{{skillTotals.firearms.attributes.strength}}</td>
+          <td>{{skillTotals.firearms.attributes.agility}}</td>
+          <td>{{skillTotals.firearms.attributes.endurance}}</td>
+          <td>{{skillTotals.firearms.attributes.intelligence}}</td>
+          <td>{{skillTotals.firearms.attributes.perception}}</td>
+          <td>{{skillTotals.firearms.attributes.charisma}}</td>
+        </tr>
 
-    <div class="stat-box">
-      <label>
-        Manual
-        <input
-          type="number"
-          name="system.skills.base.manual.value"
-          value="{{system.skills.base.manual.value}}"
-          min="0"
-        />
-      </label>
-    </div>
+        <tr>
+          <td>Manual</td>
+          <td><input type="number" name="system.skills.base.manual.value" value="{{system.skills.base.manual.value}}" min="0" /></td>
+          <td>{{skillTotals.manual.attributes.strength}}</td>
+          <td>{{skillTotals.manual.attributes.agility}}</td>
+          <td>{{skillTotals.manual.attributes.endurance}}</td>
+          <td>{{skillTotals.manual.attributes.intelligence}}</td>
+          <td>{{skillTotals.manual.attributes.perception}}</td>
+          <td>{{skillTotals.manual.attributes.charisma}}</td>
+        </tr>
 
-    <div class="stat-box">
-      <label>
-        Social
-        <input
-          type="number"
-          name="system.skills.base.social.value"
-          value="{{system.skills.base.social.value}}"
-          min="0"
-        />
-      </label>
-    </div>
+        <tr>
+          <td>Social</td>
+          <td><input type="number" name="system.skills.base.social.value" value="{{system.skills.base.social.value}}" min="0" /></td>
+          <td>{{skillTotals.social.attributes.strength}}</td>
+          <td>{{skillTotals.social.attributes.agility}}</td>
+          <td>{{skillTotals.social.attributes.endurance}}</td>
+          <td>{{skillTotals.social.attributes.intelligence}}</td>
+          <td>{{skillTotals.social.attributes.perception}}</td>
+          <td>{{skillTotals.social.attributes.charisma}}</td>
+        </tr>
 
-    <div class="stat-box">
-      <label>
-        Weaponry
-        <input
-          type="number"
-          name="system.skills.base.weaponry.value"
-          value="{{system.skills.base.weaponry.value}}"
-          min="0"
-        />
-      </label>
-    </div>
-
+        <tr>
+          <td>Weaponry</td>
+          <td><input type="number" name="system.skills.base.weaponry.value" value="{{system.skills.base.weaponry.value}}" min="0" /></td>
+          <td>{{skillTotals.weaponry.attributes.strength}}</td>
+          <td>{{skillTotals.weaponry.attributes.agility}}</td>
+          <td>{{skillTotals.weaponry.attributes.endurance}}</td>
+          <td>{{skillTotals.weaponry.attributes.intelligence}}</td>
+          <td>{{skillTotals.weaponry.attributes.perception}}</td>
+          <td>{{skillTotals.weaponry.attributes.charisma}}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </section>

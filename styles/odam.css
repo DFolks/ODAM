@@ -207,3 +207,40 @@
 .nemesis-section h2 {
   background: #000;
 }
+
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fffaf0;
+  font-size: 0.8rem;
+}
+
+.skills-table th {
+  background: #5a4b36;
+  color: #fffaf0;
+  border: 1px solid #1f1b16;
+  padding: 0.25rem;
+  text-align: center;
+}
+
+.skills-table td {
+  border: 1px solid #1f1b16;
+  padding: 0.2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.skills-table td:first-child {
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.skills-table input {
+  width: 3rem;
+  text-align: center;
+  border: 1px solid #1f1b16;
+  background: #ffffff;
+  font-weight: bold;
+  color: #5a4b36;
+}
