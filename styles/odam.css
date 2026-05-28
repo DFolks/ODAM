@@ -100,6 +100,7 @@
   font-weight: bold;
   color: #5a4b36;
 }
+
 .pool-row {
   display: flex;
   align-items: center;
@@ -107,11 +108,40 @@
   gap: 0.5rem;
 }
 
+.pool-row input {
+  width: 4rem;
+}
+
 .pool-row span {
   font-weight: bold;
   font-size: 1.2rem;
 }
 
-.pool-row input {
-  width: 4rem;
+.sheet-main-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.sheet-main-left,
+.sheet-main-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.placeholder-section p {
+  margin: 0;
+  font-style: italic;
+  color: #5a4b36;
+}
+
+.sheet-main-right .odam-grid.two,
+.sheet-main-right .odam-grid.three {
+  grid-template-columns: 1fr;
+}
+
+.sheet-main-right .pool-row input {
+  width: 4.5rem;
 }

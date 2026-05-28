@@ -1,5 +1,4 @@
 <form class="odam-sheet-body">
-
   <header class="sheet-header">
     <h1>{{actor.name}}</h1>
   </header>
@@ -8,8 +7,34 @@
 
   {{> "systems/odam/templates/actor/parts/attributes.hbs"}}
 
-  {{> "systems/odam/templates/actor/parts/derived.hbs"}}
+  <section class="sheet-main-grid">
+    <section class="sheet-main-left">
+      <section class="sheet-section placeholder-section">
+        <h2>Learned / Skills</h2>
+        <div class="sheet-section-content">
+          <p>Base Skills will go here next.</p>
+        </div>
+      </section>
+    </section>
 
-  {{> "systems/odam/templates/actor/parts/pools.hbs"}}
+    <section class="sheet-main-right">
+      {{> "systems/odam/templates/actor/parts/derived.hbs"}}
 
+      {{> "systems/odam/templates/actor/parts/pools.hbs"}}
+
+      <section class="sheet-section placeholder-section">
+        <h2>Magical</h2>
+        <div class="sheet-section-content">
+          <p>Controls, Traditions, Remnants, and Practices will go here.</p>
+        </div>
+      </section>
+
+      <section class="sheet-section placeholder-section">
+        <h2>Material</h2>
+        <div class="sheet-section-content">
+          <p>Possessions and Artifacts will go here.</p>
+        </div>
+      </section>
+    </section>
+  </section>
 </form>
